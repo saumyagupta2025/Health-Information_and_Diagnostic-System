@@ -22,10 +22,10 @@ hide_menu="""
     visibility:hidden;
 }
 footer{
-    visibility:visible;
+    visibility:hidden;
 }
 footer:after{
-    content:'Copyright@2021:Streamlit';
+    content:'Developed by Saumya Gupta';
     display:block;
     position:relative;
     color:tomato;
