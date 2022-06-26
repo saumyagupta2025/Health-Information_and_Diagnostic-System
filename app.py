@@ -183,7 +183,7 @@ def diabetes_home():
         diabetes()
 
 def stroke():
-    model = pickle.load(open("Stroke_model.pkl", "rb"))
+    model = pickle.load(open("Stroke_rf_model.pkl", "rb"))
     labelEncoder = pickle.load(open("LabelEncoder.pkl","rb"))
 
     gender = st.selectbox("Enter the gender", ('Male', 'Female'))
