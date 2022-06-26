@@ -29,6 +29,7 @@ footer:before{
     display:block;
     position:relative;
     color:tomato;
+    text-align: center
     padding:5px;
     top:3px;
 }
