@@ -456,7 +456,7 @@ def __main__():
         heartAttackHome()
     if selected == 'Home':
         welcome()
-    if selected == 'Prediction based on Symptoms':
+    if selected == 'Disease Prediction based on Symptoms':
         symptoms()
     if selected == 'Prediction of Tuberculosis':
         TbHome()
