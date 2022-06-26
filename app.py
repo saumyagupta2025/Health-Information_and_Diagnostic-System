@@ -25,7 +25,8 @@ footer{
     visibility:visible;
 }
 footer:before{
-    content:'Built & developed by Saumya Gupta';
+    content:'Note: This is only a demonstration of Machine Learning applications and is not intended for serious use.
+    Built & developed by Saumya Gupta';
     display:block;
     position:relative;
     color:tomato;
@@ -248,7 +249,7 @@ def stroke():
 
         else: 
             st.success("You are not at a risk of brain stroke.")
-            print("No stroke")
+        
 
 def diabetes():
     #st.title("Diabetes Prediction System")
@@ -271,9 +272,9 @@ def diabetes():
         pred = model_diabetes.predict(sample)
        
         if pred == 1:
-            st.error("You may have diabetes")
+            st.error("You may have diabetes!")
         else: 
-            st.success("You are not at risk of diabetes")
+            st.success("You are not at a risk of diabetes.")
 
 
 def heartAttackHome():
