@@ -415,7 +415,7 @@ def welcome():
 
 def __main__():
 
-    st.footer("Hello")
+    #st.footer("Hello")
 
 
 
