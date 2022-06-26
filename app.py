@@ -244,10 +244,10 @@ def stroke():
         prediction = model.predict(test)
         #prediction
         if prediction == 1:
-            st.error("You may have stroke")
-            st.title("You may have stroke")
+            st.error("You are at a risk of brain stroke!")
+
         else: 
-            st.success("No stroke")
+            st.success("You are not at a risk of brain stroke.")
             print("No stroke")
 
 def diabetes():
@@ -273,8 +273,7 @@ def diabetes():
         if pred == 1:
             st.error("You may have diabetes")
         else: 
-            st.success("No diabates")
-            print("No Diabetes")
+            st.success("You are not at risk of diabetes")
 
 
 def heartAttackHome():
@@ -360,9 +359,9 @@ def heartAttack():
         pred = model.predict(sample)
 
         if pred == 1:
-            st.error("You have high risk of heart attack")
+            st.error("You are at a risk of heart attack!")
         else:
-            st.success("No risk of heart attack")
+            st.success("You are not at a risk of heart attack.")
 
 
 def TbHome():
