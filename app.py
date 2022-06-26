@@ -462,10 +462,11 @@ def predict_tuberculosis():
 def welcome():
     
     st.title("Health Information & Diagnostic System")
+    st.write("")
     st.image("dbwh8kv-375c5c96-00bc-4bd7-b57a-b9908074ed18.jpeg", width = 700)
     st.write("")
     st. markdown("<p style='text-align: justify;'>Good health is central to human happiness and well-being that contributes significantly to prosperity and wealth and even economic progress, as healthy populations are more productive, save more and live longer. When a person leads a healthy lifestyle, the body remains healthy and the mind is active and fresh. The most important concept of leading a healthy life is to provide immunity strength against various diseases for which timely detection and identification of diseases is a necessity. The traditional methods which are used to diagnose a disease are manual and error-prone. Usage of Artificial Intelligence (AI) predictive techniques enables auto diagnosis and reduces detection errors compared to exclusive human expertise.  Disease diagnosis is the identification of an health issue, disease, disorder, or other condition that a person may have. Disease diagnoses could be sometimes very easy tasks, while others may be a bit trickier. Disease detection driven by artificial intelligence (AI) has demonstrated to be an effective tool for identifying undiagnosed patients with complex common as well as rare diseases. The use of these algorithms is driven by awareness that underdiagnosis leads to a heavy burden for patients and healthcare professionals, and is also a challenge for pharmaceutical companies seeking to expand the patient pool for their medications, whether to power clinical trials or to efficiently target healthcare providers.</p>", unsafe_allow_html=True) 
-
+    
 
 
 def __main__():
