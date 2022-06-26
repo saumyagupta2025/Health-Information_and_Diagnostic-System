@@ -439,7 +439,7 @@ def __main__():
     with st.sidebar:
         #st.title("Menu")
         selected = option_menu(menu_title = "Menu", 
-                            options = ["Home",  "Disease Prediction based on Symptoms", "Prediction of Tuberculosis" ,"Brain Stroke Prediction", "Diabetes Prediction", "Heart Attack Prediction"], 
+                            options = ["Home",  "Disease Prediction based on Symptoms", "Prediction of Tuberculosis" ,"Prediction of Brain Stroke", "Prediction of Diabetes", "Prediction of Heart Attack"], 
                             default_index=0, 
                             menu_icon=None, 
                             icons=None, 
@@ -448,11 +448,11 @@ def __main__():
                             key=None)
    
 
-    if selected == 'Brain Stroke Prediction':
+    if selected == 'Prediction of Brain Stroke':
         stroke_home()
-    if selected == 'Diabetes Prediction':
+    if selected == 'Prediction of Diabetes':
         diabetes_home()
-    if selected == 'Heart Attack Prediction':
+    if selected == 'Prediction of Heart Attack ':
         heartAttackHome()
     if selected == 'Home':
         welcome()
