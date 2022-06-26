@@ -33,6 +33,15 @@ footer:before{
     padding:5px;
     top:3px;
 }
+footer:after{
+    content:'This is only a demonstration of Machine Learning applications and is not intended for serious use.';
+    display:block;
+    position:relative;
+    color:tomato;
+    text-align: center
+    padding:5px;
+    top:3px;
+}
 </style>
 """
 
