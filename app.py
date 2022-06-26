@@ -34,7 +34,7 @@ footer:after{
     top:3px;
 }
 footer:before{
-    content:'Disclaimer: This is only a demonstration of Machine Learning applications and is not intended for serious use.';
+    content:'Disclaimer: This content, developed to demonstrate the capabilities of Machine Learning in the field of Healthcare. The text, graphics, images, and other material contained, and products, is general in nature and for informational purposes only and does not constitute medical advice; the Content is not intended to be a substitute for professional medical advice, diagnosis, or treatment. Always consult your doctor or other qualified healthcare provider with any questions you may have regarding a medical condition.';
     display:block;
     position:relative;
     color:tomato;
