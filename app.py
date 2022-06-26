@@ -24,7 +24,7 @@ hide_menu="""
 footer{
     visibility:visible;
 }
-footer:before{
+footer:after{
     content:'Built & developed by Saumya Gupta';
     display:block;
     position:relative;
@@ -33,7 +33,7 @@ footer:before{
     padding:5px;
     top:3px;
 }
-footer:after{
+footer:before{
     content:'Disclaimer: This is only a demonstration of Machine Learning applications and is not intended for serious use.';
     display:block;
     position:relative;
