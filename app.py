@@ -25,7 +25,7 @@ footer{
     visibility:visible;
 }
 footer:before{
-    content:'Developed by Saumya Gupta';
+    content:'Made with ♥ by Saumya Gupta';
     display:block;
     position:relative;
     color:tomato;
