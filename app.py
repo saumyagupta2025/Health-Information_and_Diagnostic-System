@@ -453,7 +453,7 @@ def __main__():
         stroke_home()
     if selected == 'Prediction of Diabetes':
         diabetes_home()
-    if selected == 'Prediction of Heart Attack ':
+    if selected == 'Prediction of Heart Attack':
         heartAttackHome()
     if selected == 'Home':
         welcome()
