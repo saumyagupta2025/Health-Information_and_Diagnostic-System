@@ -372,6 +372,10 @@ def TbHome():
 
     st.write("")
 
+    '''
+    Tuberculosis (TB) is a potentially serious infectious disease that mainly affects the lungs. The bacteria that cause tuberculosis are spread from person to person through tiny droplets released into the air via coughs and sneezes.
+    '''
+
     if (st.button('Upload Image', key='Tuberculosis', on_click=callback) or st.session_state.button_clicked):
         os.environ["CUDA_VISIBLE_DEVICES"] = "-1"
         predict_tuberculosis()
