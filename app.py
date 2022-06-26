@@ -428,8 +428,12 @@ def welcome():
     st.title("Health Information & Diagnostic System")
     st.image("dbwh8kv-375c5c96-00bc-4bd7-b57a-b9908074ed18.jpeg", width = 700)
     st.write("")
-    st. markdown("<p style='text-align: justify;'>Disease diagnosis is the identification of an health issue, disease, disorder, or other condition that a person may have. Disease diagnoses could be sometimes very easy tasks, while others may be a bit trickier. There are large data sets available; however, there is a limitation of tools that can accurately determine the patterns and make predictions. The traditional methods which are used to diagnose a disease are manual and error-prone. Usage of Artificial Intelligence (AI) predictive techniques enables auto diagnosis and reduces detection errors compared to exclusive human expertise. In this paper, we have reviewed the current literature for the last 10 years, from January 2009 to December 2019. The study considered eight most frequently used databases, in which a total of 105 articles were found. A detailed analysis of those articles was conducted in order to classify most used AI techniques for medical diagnostic systems. We further discuss various diseases along with corresponding techniques of AI, including Fuzzy Logic, Machine Learning, and Deep Learning. This research paper aims to reveal some important insights into current and previous different AI techniques in the medical field used in today’s medical research, particularly in heart disease prediction, brain disease, prostate, liver disease, and kidney disease. Finally, the paper also provides some avenues for future research on AI-based diagnostics systems based on a set of open problems and challenges.</p>", unsafe_allow_html=True)
+    st. markdown("<p style='text-align: justify;'>Good health is central to human happiness and well-being that contributes significantly to prosperity and wealth and even economic progress, as healthy populations are more productive, save more and live longer. When a person leads a healthy lifestyle, the body remains healthy and the mind is active and fresh.</p>", unsafe_allow_html=True)
    
+    '''
+    The most important concept of leading a healthy life is to provide immunity strength against various diseases for which timely detection and identification of diseases is a necessity. The traditional methods which are used to diagnose a disease are manual and error-prone. Usage of Artificial Intelligence (AI) predictive techniques enables auto diagnosis and reduces detection errors compared to exclusive human expertise.  Disease diagnosis is the identification of an health issue, disease, disorder, or other condition that a person may have. 
+    Disease diagnoses could be sometimes very easy tasks, while others may be a bit trickier. Disease detection driven by artificial intelligence (AI) has demonstrated to be an effective tool for identifying undiagnosed patients with complex common as well as rare diseases. The use of these algorithms is driven by awareness that underdiagnosis leads to a heavy burden for patients and healthcare professionals, and is also a challenge for pharmaceutical companies seeking to expand the patient pool for their medications, whether to power clinical trials or to efficiently target healthcare providers (HCPs). 
+    '''
 
 
 def __main__():
@@ -439,10 +443,10 @@ def __main__():
     with st.sidebar:
         #st.title("Menu")
         selected = option_menu(menu_title = "Menu", 
-                            options = ["Home", "Brain Stroke Prediction", "Diabetes Prediction", "Heart Attack Prediction", "Prediction based on Symptoms", "Predict Tuberculosis"], 
+                            options = ["Home",  "Disease Prediction based on Symptoms", "Prediction of Tuberculosis" ,"Brain Stroke Prediction", "Diabetes Prediction", "Heart Attack Prediction"], 
                             default_index=0, 
                             menu_icon=None, 
-                           icons=None, 
+                            icons=None, 
                             orientation="vertical",
                             styles=None, 
                             key=None)
@@ -458,7 +462,7 @@ def __main__():
         welcome()
     if selected == 'Prediction based on Symptoms':
         symptoms()
-    if selected == 'Predict Tuberculosis':
+    if selected == 'Prediction of Tuberculosis':
         TbHome()
         
 
