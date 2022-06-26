@@ -34,7 +34,7 @@ footer:before{
     top:3px;
 }
 footer:after{
-    content:'This is only a demonstration of Machine Learning applications and is not intended for serious use.';
+    content:'Disclaimer: This is only a demonstration of Machine Learning applications and is not intended for serious use.';
     display:block;
     position:relative;
     color:tomato;
