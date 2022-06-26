@@ -9,6 +9,10 @@ from streamlit_option_menu import option_menu
 from PIL import Image
 import sys 
 import os
+from tensorflow.keras.models import load_model
+import tensorflow as tf
+from tempfile import NamedTemporaryFile
+from tensorflow.keras.preprocessing import image
 #import SessionState
 
 
@@ -341,6 +345,65 @@ def heartAttack():
             st.success("No risk of heart attack")
 
 
+def TbHome():
+    st.title("Prediction of Tuberculosis using Chest X-Ray Images")
+    descImage = Image.open("Tuberculosis.jpeg")
+    st.image(descImage, caption=None, width=700)
+
+    st.write("")
+
+    if (st.button('Upload Image', key='Tuberculosis', on_click=callback) or st.session_state.button_clicked):
+        os.environ["CUDA_VISIBLE_DEVICES"] = "-1"
+        predict_tuberculosis()
+
+
+def predict_tuberculosis():
+    st.set_option('deprecation.showfileUploaderEncoding', False)
+
+    fp = "cnn_tuberculosis_model.h5"
+    cnn = load_model(fp)
+    # @st.cache(allow_output_mutation=True)
+    #cnn = loading_model()
+
+    #cnn = load_model("/content/cnn_tuberculosis_model.h5")
+
+    upload = st.file_uploader("Upload X-Ray Image")
+
+    buffer = upload
+    temp_file = NamedTemporaryFile(delete=False)
+    if buffer:
+        temp_file.write(buffer.getvalue())
+        st.write(image.load_img(temp_file.name))
+
+    if buffer is None:
+        st.text("Please upload a image")
+
+    else:
+        my_img = image.load_img(temp_file.name, target_size=(
+            500, 500), color_mode='grayscale')
+
+        # Preprocessing the image
+        prep_img = image.img_to_array(my_img)
+        prep_img = prep_img/255
+        prep_img = np.expand_dims(prep_img, axis=0)
+
+        # predict
+        preds = cnn.predict(prep_img)
+        if preds >= 0.5:
+            out = ('I am {:.2%} percent confirmed that this is a Tuberculosis case'.format(
+                preds[0][0]))
+
+        else:
+            out = ('I am {:.2%} percent confirmed that this is a Normal case'.format(
+                1-preds[0][0]))
+
+        st.success(out)
+
+        tempImage = Image.open(temp_file)
+        st.image(tempImage, use_column_width=True)
+
+
+
 def welcome():
     
     st.title("Health Information & Diagnostic System")
@@ -354,7 +417,7 @@ def __main__():
     with st.sidebar:
         #st.title("Menu")
         selected = option_menu(menu_title = "Menu", 
-                            options = ["Home", "Brain Stroke Prediction", "Diabetes Prediction", "Heart Attack Prediction", "Prediction based on Symptoms"], 
+                            options = ["Home", "Brain Stroke Prediction", "Diabetes Prediction", "Heart Attack Prediction", "Prediction based on Symptoms", "Predict Tuberculosis"], 
                             default_index=0, 
                             menu_icon=None, 
                            icons=None, 
@@ -373,6 +436,9 @@ def __main__():
         welcome()
     if selected == 'Prediction based on Symptoms':
         symptoms()
+    if selected == 'Predict Tuberculosis':
+        TbHome()
+        
 
 
 __main__()
