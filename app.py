@@ -25,8 +25,7 @@ footer{
     visibility:visible;
 }
 footer:before{
-    content:'Note: This is only a demonstration of Machine Learning applications and is not intended for serious use.
-    Built & developed by Saumya Gupta';
+    content:'Built & developed by Saumya Gupta';
     display:block;
     position:relative;
     color:tomato;
