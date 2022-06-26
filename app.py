@@ -22,9 +22,9 @@ hide_menu="""
     visibility:hidden;
 }
 footer{
-    visibility:hidden;
+    visibility:visible;
 }
-footer:after{
+footer:before{
     content:'Developed by Saumya Gupta';
     display:block;
     position:relative;
