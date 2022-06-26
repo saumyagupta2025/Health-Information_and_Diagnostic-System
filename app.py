@@ -389,7 +389,13 @@ def TbHome():
     * Night sweats
     * Chills
     * Loss of appetite
+
+
+    Tuberculosis can also affect other parts of your body, including the kidneys, spine or brain. When TB occurs outside your lungs, signs and symptoms vary according to the organs involved. For example, tuberculosis of the spine might cause back pain, and tuberculosis in your kidneys might cause blood in your urine.
+    
     '''
+
+    st.write("")
 
     if (st.button('Upload Image', key='Tuberculosis', on_click=callback) or st.session_state.button_clicked):
         os.environ["CUDA_VISIBLE_DEVICES"] = "-1"
