@@ -24,6 +24,7 @@ hide_menu="""
 footer{
     visibility:visible;
     text-align: center
+    position:relative;
     padding:5px;
     top:3px;
 }
