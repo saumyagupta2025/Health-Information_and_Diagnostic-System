@@ -29,24 +29,24 @@ def symptoms():
 
     with col1:
         #st.image("/Users/saumyagupta/Desktop/DiseasePredictionSystem/Stroke/Images/Symptoms/BGRemoved/Cough-removebg-preview.png")
-        st.image("/Users/saumyagupta/Desktop/DiseasePredictionSystem/Stroke/Images/Symptoms/W:O BG/Cough1-removebg-preview.png", width = 100,caption = "Cough")
+        st.image("Cough1-removebg-preview.png", width = 100,caption = "Cough")
     with col2:
         #st.image("/Users/saumyagupta/Desktop/DiseasePredictionSystem/Stroke/Images/Symptoms/BGRemoved/Fever-removebg-preview.png")
-        st.image("/Users/saumyagupta/Desktop/DiseasePredictionSystem/Stroke/Images/Symptoms/W:O BG/Fever1-removebg-preview.png", width = 100,caption = "Fever")    
+        st.image("Fever1-removebg-preview.png", width = 100,caption = "Fever")    
     with col3:
-        st.image("/Users/saumyagupta/Desktop/DiseasePredictionSystem/Stroke/Images/Symptoms/W:O BG/MuscleAche1-removebg-preview.png", width = 100, caption= "Muscle or Body Ache")
+        st.image("MuscleAche1-removebg-preview.png", width = 100, caption= "Muscle or Body Ache")
         #st.image("/Users/saumyagupta/Desktop/DiseasePredictionSystem/Stroke/Images/Symptoms/BGRemoved/MuscleAche-removebg-preview.png")
     with col4:
-        st.image("/Users/saumyagupta/Desktop/DiseasePredictionSystem/Stroke/Images/Symptoms/W:O BG/RunnyNose1-removebg-preview.png", width = 100,caption = "Congestion or Runny Nose")
+        st.image("RunnyNose1-removebg-preview.png", width = 100,caption = "Congestion or Runny Nose")
         #st.image("/Users/saumyagupta/Desktop/DiseasePredictionSystem/Stroke/Images/Symptoms/BGRemoved/RunnyNose-removebg-preview.png")
     with col5:
-        st.image("/Users/saumyagupta/Desktop/DiseasePredictionSystem/Stroke/Images/Symptoms/W:O BG/Sorethroat1-removebg-preview.png", width = 100,caption = "Sore Throat")
+        st.image("Sorethroat1-removebg-preview.png", width = 100,caption = "Sore Throat")
         #st.image("/Users/saumyagupta/Desktop/DiseasePredictionSystem/Stroke/Images/Symptoms/BGRemoved/SoreThroat-removebg-preview.png")
     with col6:
-        st.image("/Users/saumyagupta/Desktop/DiseasePredictionSystem/Stroke/Images/Symptoms/W:O BG/ShortnessOfBreadth-removebg-preview.png", width = 100,caption = "Shortness of Breadth")
+        st.image("ShortnessOfBreadth-removebg-preview.png", width = 100,caption = "Shortness of Breadth")
 
 
-    symptoms_list = pickle.load(open("/Users/saumyagupta/Desktop/DiseasePredictionSystem/Stroke/symptoms_list.pkl", "rb"))
+    symptoms_list = pickle.load(open("symptoms_list.pkl", "rb"))
     options = st.multiselect("Select your symptoms", symptoms_list)
     
     symptoms_df = pd.DataFrame(columns=symptoms_list)
@@ -64,8 +64,8 @@ def symptoms():
             else:
                 row[i] = 0
     #print(row)
-    model_symptoms = pickle.load(open("/Users/saumyagupta/Desktop/DiseasePredictionSystem/Stroke/Symptoms_model.pkl", "rb"))
-    encoder = pickle.load(open("/Users/saumyagupta/Desktop/DiseasePredictionSystem/Stroke/labelEncoder_for_Symptoms.pkl", "rb"))
+    model_symptoms = pickle.load(open("Symptoms_model.pkl", "rb"))
+    encoder = pickle.load(open("labelEncoder_for_Symptoms.pkl", "rb"))
     
     if st.button('Predict'):   
         if(options == []):
@@ -95,7 +95,7 @@ def symptoms():
 
 def stroke_home():
     st.title("Brain Stroke Prediction System")
-    image = Image.open("/Users/saumyagupta/Desktop/DiseasePredictionSystem/Stroke/Images/Stroke.jpeg")
+    image = Image.open("Stroke.jpeg")
     st.write("")
     st.image(image, caption = None, width = 700)
 
@@ -136,7 +136,7 @@ def stroke_home():
 def diabetes_home():
     #callback1()
     st.title("Diabetes Prediction System")
-    image = Image.open("/Users/saumyagupta/Desktop/DiseasePredictionSystem/Stroke/Images/Diabetes.jpeg")
+    image = Image.open("Diabetes.jpeg")
     st.write("")
     st.image(image, caption = None, width = 700)
 
@@ -255,7 +255,7 @@ def diabetes():
 
 def heartAttackHome():
     st.title("Heart Attack Prediction System")
-    image = Image.open("/Users/saumyagupta/Desktop/DiseasePredictionSystem/Stroke/Images/heartAttackImage.jpeg")
+    image = Image.open("heartAttackImage.jpeg")
     st.write("")
     st.image(image, caption = None, width = 700)
 
@@ -344,7 +344,7 @@ def heartAttack():
 def welcome():
     
     st.title("Health Information & Diagnostic System")
-    st.image("/Users/saumyagupta/Desktop/DiseasePredictionSystem/Stroke/Images/dbwh8kv-375c5c96-00bc-4bd7-b57a-b9908074ed18.jpeg", width = 700)
+    st.image("dbwh8kv-375c5c96-00bc-4bd7-b57a-b9908074ed18.jpeg", width = 700)
     st.write("")
     st. markdown("<p style='text-align: justify;'>Disease diagnosis is the identification of an health issue, disease, disorder, or other condition that a person may have. Disease diagnoses could be sometimes very easy tasks, while others may be a bit trickier. There are large data sets available; however, there is a limitation of tools that can accurately determine the patterns and make predictions. The traditional methods which are used to diagnose a disease are manual and error-prone. Usage of Artificial Intelligence (AI) predictive techniques enables auto diagnosis and reduces detection errors compared to exclusive human expertise. In this paper, we have reviewed the current literature for the last 10 years, from January 2009 to December 2019. The study considered eight most frequently used databases, in which a total of 105 articles were found. A detailed analysis of those articles was conducted in order to classify most used AI techniques for medical diagnostic systems. We further discuss various diseases along with corresponding techniques of AI, including Fuzzy Logic, Machine Learning, and Deep Learning. This research paper aims to reveal some important insights into current and previous different AI techniques in the medical field used in today’s medical research, particularly in heart disease prediction, brain disease, prostate, liver disease, and kidney disease. Finally, the paper also provides some avenues for future research on AI-based diagnostics systems based on a set of open problems and challenges.</p>", unsafe_allow_html=True)
    
