@@ -19,7 +19,7 @@ from tensorflow.keras.preprocessing import image
 hide_menu="""
 <style>
 #MainMenu{
-    visibility:hidden;
+    visibility:visible;
 }
 footer{
     visibility:visible;
