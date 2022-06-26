@@ -23,6 +23,9 @@ hide_menu="""
 }
 footer{
     visibility:visible;
+    text-align: center
+    padding:5px;
+    top:3px;
 }
 footer:after{
     content:'Built & developed by Saumya Gupta';
