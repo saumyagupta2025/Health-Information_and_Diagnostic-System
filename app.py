@@ -376,6 +376,21 @@ def TbHome():
     Tuberculosis (TB) is a potentially serious infectious disease that mainly affects the lungs. The bacteria that cause tuberculosis are spread from person to person through tiny droplets released into the air via coughs and sneezes.
     '''
 
+    st.subheader("Symptoms of Tuberculosis")
+    '''
+    Signs and symptoms of active TB include:
+
+    * Coughing for three or more weeks
+    * Coughing up blood or mucus
+    * Chest pain, or pain with breathing or coughing
+    * Unintentional weight loss
+    * Fatigue
+    * Fever
+    * Night sweats
+    * Chills
+    * Loss of appetite
+    '''
+
     if (st.button('Upload Image', key='Tuberculosis', on_click=callback) or st.session_state.button_clicked):
         os.environ["CUDA_VISIBLE_DEVICES"] = "-1"
         predict_tuberculosis()
