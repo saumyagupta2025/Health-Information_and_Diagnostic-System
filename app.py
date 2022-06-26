@@ -43,8 +43,7 @@ footer:before{
     display:block;
     position:relative;
     color:grey;
-    text-align:justify;
-    text-align-last:left;
+    text-align:center;
     padding:5px;
     top:3px;
 }
