@@ -39,7 +39,7 @@ footer:before{
     position:relative;
     color:grey;
     text-align:justify;
-    text-align-last:center;
+    text-align-last:left;
     padding:5px;
     top:3px;
 }
