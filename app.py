@@ -435,7 +435,7 @@ def welcome():
 def __main__():
 
     
-    #st.markdown(hide_streamlit_style, unsafe_allow_html=True) 
+    st.markdown(hide_menu, unsafe_allow_html=True) 
     with st.sidebar:
         #st.title("Menu")
         selected = option_menu(menu_title = "Menu", 
