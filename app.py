@@ -415,8 +415,8 @@ def TbHome():
 def predict_tuberculosis():
     st.set_option('deprecation.showfileUploaderEncoding', False)
 
-    fp = "cnn.pkl"
-    cnn = pickle.load(fp)
+    fp = "cnn_tuberculosis_model.h5"
+    cnn = load_model(fp)
     # @st.cache(allow_output_mutation=True)
     #cnn = loading_model()
 
